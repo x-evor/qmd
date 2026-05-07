@@ -4,6 +4,9 @@
 
 ### Fixes
 
+- Embedding: default to an external OpenAI-compatible embeddings API
+  (`text-embedding-3-small`) and require explicit `hf:`/`.gguf`
+  configuration to use local node-llama-cpp embedding models.
 - GPU: respect explicit `QMD_LLAMA_GPU=metal|vulkan|cuda` backend overrides instead of always using auto GPU selection. #529
 - Fix: preserve original filename case in `handelize()`. The previous
   `.toLowerCase()` call made indexed paths unreachable on case-sensitive
